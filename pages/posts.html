@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,9 +9,21 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <h1>Posts</h1>
+        <button onclick="sair()">Sair</button>
+    </header>
     <main></main>
-    <footer></footer>
+    <footer>
+        <input type="text" placeholder="Buscar posts" onkeyup="buscarPosts(this.value)">
+    </footer>
+    <section id="modal" class="modal oculto">
+        <div class="janela">
+            <h2>Detalhes do Post</h2>
+            <div id="post-details"></div>
+            <button onclick="modal.classList.add('oculto')">Fechar</button>
+        </div>
+    </section>
 </body>
 <script src="../scripts/posts.js"></script>
 
